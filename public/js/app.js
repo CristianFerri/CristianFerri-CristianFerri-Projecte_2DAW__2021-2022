@@ -20830,14 +20830,46 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         window.location.href = "http://ask4urticket.herokuapp.com/cart";
       }
     },
-    checkIfReservado: function checkIfReservado(id, i) {
-      for (var _i = 0; _i < this.reservas.length; _i++) {
-        if (this.reservas[_i].id == id) {
-          return true;
-        }
-      }
+    checkIfReservado: function checkIfReservado(b) {
+      var _this2 = this;
 
-      return false;
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        var i;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                console.log("Butaca: " + b.sillon + " Id: " + b.id);
+                i = 0;
+
+              case 2:
+                if (!(i < _this2.reservas.length)) {
+                  _context2.next = 8;
+                  break;
+                }
+
+                if (!(_this2.reservas[i].id == id)) {
+                  _context2.next = 5;
+                  break;
+                }
+
+                return _context2.abrupt("return", true);
+
+              case 5:
+                i++;
+                _context2.next = 2;
+                break;
+
+              case 8:
+                return _context2.abrupt("return", false);
+
+              case 9:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
     }
   }
 });
@@ -52614,7 +52646,7 @@ var render = function () {
           },
           _vm._l(_vm.asientos, function (b, i) {
             return _c("span", { key: i, staticClass: "butacaRow" }, [
-              !_vm.checkIfReservado(b.id, i)
+              !_vm.checkIfReservado(b)
                 ? _c("span", [
                     _c("i", {
                       staticClass: "fas fa-couch me-2 butacaIcon_d",
