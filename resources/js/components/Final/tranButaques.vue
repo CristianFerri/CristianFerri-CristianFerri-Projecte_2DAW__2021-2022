@@ -233,7 +233,7 @@ export default {
         async checkIfReservado(b) {
             console.log("Butaca: " + b.sillon + " Id: " + b.id);
             for (let i = 0; i < this.reservas.length; i++) {
-                if (this.reservas[i].id == id) {
+                if (this.reservas[i].id == b.id) {
                     return true;
                 }
             }

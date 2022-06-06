@@ -20848,7 +20848,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   break;
                 }
 
-                if (!(_this2.reservas[i].id == id)) {
+                if (!(_this2.reservas[i].id == b.id)) {
                   _context2.next = 5;
                   break;
                 }
