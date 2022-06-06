@@ -233,7 +233,10 @@ export default {
         async checkIfReservado(b) {
             console.log("Butaca: " + b.sillon + " Id: " + b.id);
             for (let i = 0; i < this.reservas.length; i++) {
+                console.log(this.reservas[i].id);
+                console.log(b.id);
                 if (this.reservas[i].id == b.id) {
+                    console.log('entre');
                     return true;
                 }
             }

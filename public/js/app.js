@@ -20844,26 +20844,30 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 if (!(i < _this2.reservas.length)) {
+                  _context2.next = 11;
+                  break;
+                }
+
+                console.log(_this2.reservas[i].id);
+                console.log(b.id);
+
+                if (!(_this2.reservas[i].id == b.id)) {
                   _context2.next = 8;
                   break;
                 }
 
-                if (!(_this2.reservas[i].id == b.id)) {
-                  _context2.next = 5;
-                  break;
-                }
-
+                console.log('entre');
                 return _context2.abrupt("return", true);
 
-              case 5:
+              case 8:
                 i++;
                 _context2.next = 2;
                 break;
 
-              case 8:
+              case 11:
                 return _context2.abrupt("return", false);
 
-              case 9:
+              case 12:
               case "end":
                 return _context2.stop();
             }
