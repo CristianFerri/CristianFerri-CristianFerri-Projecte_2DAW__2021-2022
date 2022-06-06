@@ -94,7 +94,7 @@ export default {
     async getMoviesByCine(id) {
       try {
         let response = await axios
-          .get(`http://localhost:8000/cine/x/pelicula/${id}`)
+          .get(`http://ask4urticket.herokuapp.com/cine/x/pelicula/${id}`)
           .then((response) => response.data)
           .catch(function () {
           });

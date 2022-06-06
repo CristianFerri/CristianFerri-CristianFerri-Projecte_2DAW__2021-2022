@@ -27,8 +27,8 @@ class StripeController extends Controller
       $stripe->coupons->create(['id' => "ask4urticket", 'percent_off' => 0.01]);
     }
     $checkout = $stripe->checkout->sessions->create([
-      'success_url' => 'http://localhost:8000/cart/payment/success?session_id={CHECKOUT_SESSION_ID}',
-      'cancel_url' => "http://localhost:8000/cinemas/".$cine['id']."/movie/".$movie['api_id'],
+      'success_url' => 'http://ask4urticket.herokuapp.com/cart/payment/success?session_id={CHECKOUT_SESSION_ID}',
+      'cancel_url' => "http://ask4urticket.herokuapp.com/cinemas/".$cine['id']."/movie/".$movie['api_id'],
       'line_items' => $this->createProducts(),
       'mode' => 'payment',
       'discounts' => [[ 'coupon' => 'ask4urticket']],

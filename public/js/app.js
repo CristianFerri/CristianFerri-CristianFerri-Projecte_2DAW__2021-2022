@@ -20514,7 +20514,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context3.prev = 0;
                 _context3.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().get("http://localhost:8000/sesiones/get/".concat(idPeli)).then(function (response) {
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().get("http://ask4urticket.herokuapp.com/sesiones/get/".concat(idPeli)).then(function (response) {
                   return response.data;
                 })["catch"](function () {});
 
@@ -20569,7 +20569,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     goSesion: function goSesion(cuando, hora) {
       this.$cookies.set("horaSeleccionada", hora);
       this.$cookies.set("diaDespues", cuando);
-      window.location.href = "http://localhost:8000/cinemas/".concat(this.cineObj.id, "/movie/").concat(this.movieObj.api_id, "/transaccion");
+      window.location.href = "http://ask4urticket.herokuapp.com/cinemas/".concat(this.cineObj.id, "/movie/").concat(this.movieObj.api_id, "/transaccion");
     }
   }
 });
@@ -20827,7 +20827,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         this.$cookies.set("salaSelected", this.salasObj, "20MIN", '/cart');
         this.$cookies.set("numeroButacasSelected", this.butacasSelectedCnt, "20MIN", '/cart');
         this.$cookies.set("dayFormattedSelected", this.fechaFormatted, "20MIN", '/cart');
-        window.location.href = "http://localhost:8000/cart";
+        window.location.href = "http://ask4urticket.herokuapp.com/cart";
       }
     },
     checkIfReservado: function checkIfReservado(id, i) {
@@ -21213,7 +21213,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context5.prev = _context5.next) {
               case 0:
                 _context5.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().post('http://localhost:8000/setSessions', {
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().post('http://ask4urticket.herokuapp.com/setSessions', {
                   key: myKey,
                   value: myValue
                 }).then(function (res) {
@@ -21410,7 +21410,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context2.prev = 0;
                 _context2.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().get('http://localhost:8000/peliculas/get').then(function (response) {
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().get('http://ask4urticket.herokuapp.com/peliculas/get').then(function (response) {
                   return response.data;
                 })["catch"](function (response) {
                   return response.data;
@@ -21585,7 +21585,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _this6.movieSelected = peliculaId.api_id;
                 _context6.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().get("http://localhost:8000/pelicula/x/cine/".concat(peliculaId.id)).then(function (response) {
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().get("http://ask4urticket.herokuapp.com/pelicula/x/cine/".concat(peliculaId.id)).then(function (response) {
                   return response.data;
                 })["catch"](function () {});
 
@@ -21928,7 +21928,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context2.prev = 0;
                 _context2.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().get("http://localhost:8000/cine/x/pelicula/".concat(id)).then(function (response) {
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().get("http://ask4urticket.herokuapp.com/cine/x/pelicula/".concat(id)).then(function (response) {
                   return response.data;
                 })["catch"](function () {});
 
@@ -22150,7 +22150,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context2.prev = 0;
                 _context2.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().get("http://localhost:8000/cinemasJSON").then(function (response) {
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().get("http://ask4urticket.herokuapp.com/cinemasJSON").then(function (response) {
                   return response.data;
                 })["catch"](function () {});
 
@@ -22251,7 +22251,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 type: "success",
                 timer: 6000
               }).then(function (r) {
-                window.location.href = "http://localhost:8000/";
+                window.location.href = "http://ask4urticket.herokuapp.com/";
               });
 
             case 1:

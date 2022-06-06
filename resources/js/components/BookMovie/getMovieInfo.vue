@@ -90,7 +90,7 @@
 
       async getSesions(idPeli) {
         try {
-          let response = await axios.get(`http://localhost:8000/sesiones/get/${idPeli}`)
+          let response = await axios.get(`http://ask4urticket.herokuapp.com/sesiones/get/${idPeli}`)
             .then (response => response.data)
             .catch(function () {
             })
@@ -140,7 +140,7 @@
       goSesion(cuando, hora) {
         this.$cookies.set("horaSeleccionada", hora);
         this.$cookies.set("diaDespues", cuando);
-        window.location.href = `http://localhost:8000/cinemas/${this.cineObj.id}/movie/${this.movieObj.api_id}/transaccion`;
+        window.location.href = `http://ask4urticket.herokuapp.com/cinemas/${this.cineObj.id}/movie/${this.movieObj.api_id}/transaccion`;
       }
     }
   }

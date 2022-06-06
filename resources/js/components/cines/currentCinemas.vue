@@ -64,7 +64,7 @@ export default {
     async getCinemas() {
       try {
         let response = await axios
-          .get("http://localhost:8000/cinemasJSON")
+          .get("http://ask4urticket.herokuapp.com/cinemasJSON")
           .then((response) => response.data)
           .catch(function () {
           });

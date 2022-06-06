@@ -242,7 +242,7 @@
             }, 
 
             async setSessions(myKey, myValue) {
-                await axios.post('http://localhost:8000/setSessions', {
+                await axios.post('http://ask4urticket.herokuapp.com/setSessions', {
                         key: myKey,
                         value: myValue,
                     }).then ((res) => {

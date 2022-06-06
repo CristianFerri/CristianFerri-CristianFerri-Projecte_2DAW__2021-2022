@@ -118,7 +118,7 @@ export default {
   methods: {
     async getAlreadyPlayingFromApi() {
       try {
-        let response = await axios.get('http://localhost:8000/peliculas/get')
+        let response = await axios.get('http://ask4urticket.herokuapp.com/peliculas/get')
           .then(response => response.data)
           .catch(response => response.data, () => {
           });
@@ -187,7 +187,7 @@ export default {
 
     async getCinema(peliculaId) {
       this.movieSelected = peliculaId.api_id;
-      let response = await axios.get(`http://localhost:8000/pelicula/x/cine/${peliculaId.id}`)
+      let response = await axios.get(`http://ask4urticket.herokuapp.com/pelicula/x/cine/${peliculaId.id}`)
         .then(response => response.data)
         .catch(function () {
         })

@@ -226,7 +226,7 @@ export default {
                 this.$cookies.set("salaSelected", this.salasObj, "20MIN", '/cart');
                 this.$cookies.set("numeroButacasSelected", this.butacasSelectedCnt, "20MIN", '/cart');
                 this.$cookies.set("dayFormattedSelected", this.fechaFormatted, "20MIN", '/cart');
-                window.location.href = "http://localhost:8000/cart";
+                window.location.href = "http://ask4urticket.herokuapp.com/cart";
             }
         },
 

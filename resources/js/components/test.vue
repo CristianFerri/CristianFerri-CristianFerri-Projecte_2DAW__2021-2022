@@ -15,7 +15,7 @@
         type: "success",
         timer: 6000
       }).then(r => {
-        window.location.href = "http://localhost:8000/";
+        window.location.href = "http://ask4urticket.herokuapp.com/";
       });
     },
   }
