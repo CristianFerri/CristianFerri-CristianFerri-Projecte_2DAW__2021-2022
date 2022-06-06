@@ -20,7 +20,7 @@
             <div class="col-md-5">
                 <div id="butaques" v-show="butaquesCargando">
                     <span class="butacaRow" v-for="(b, i) in asientos" :key="i">
-                        <span v-if="!checkIfReservado(b)">
+                        <span v-if="checkIfReservado(b) == false">
                             <i class="fas fa-couch me-2 butacaIcon_d" @click="getButaca(b)" :id="'butaca-' + b.id" :title="'Butaca ' + b.sillon + ': Fila ' + b.row + ' - Asiento ' + b.col"></i>
                         </span>
                         <span v-else>
@@ -230,7 +230,7 @@ export default {
             }
         },
 
-        async checkIfReservado(b) {
+        checkIfReservado(b) {
             console.log("Butaca: " + b.sillon + " Id: " + b.id);
             for (let i = 0; i < this.reservas.length; i++) {
                 console.log(this.reservas[i].id);

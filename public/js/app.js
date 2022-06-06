@@ -20831,49 +20831,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
     },
     checkIfReservado: function checkIfReservado(b) {
-      var _this2 = this;
+      console.log("Butaca: " + b.sillon + " Id: " + b.id);
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-        var i;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                console.log("Butaca: " + b.sillon + " Id: " + b.id);
-                i = 0;
+      for (var i = 0; i < this.reservas.length; i++) {
+        console.log(this.reservas[i].id);
+        console.log(b.id);
 
-              case 2:
-                if (!(i < _this2.reservas.length)) {
-                  _context2.next = 11;
-                  break;
-                }
+        if (this.reservas[i].id == b.id) {
+          console.log('entre');
+          return true;
+        }
+      }
 
-                console.log(_this2.reservas[i].id);
-                console.log(b.id);
-
-                if (!(_this2.reservas[i].id == b.id)) {
-                  _context2.next = 8;
-                  break;
-                }
-
-                console.log('entre');
-                return _context2.abrupt("return", true);
-
-              case 8:
-                i++;
-                _context2.next = 2;
-                break;
-
-              case 11:
-                return _context2.abrupt("return", false);
-
-              case 12:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }))();
+      return false;
     }
   }
 });
@@ -52650,7 +52620,7 @@ var render = function () {
           },
           _vm._l(_vm.asientos, function (b, i) {
             return _c("span", { key: i, staticClass: "butacaRow" }, [
-              !_vm.checkIfReservado(b)
+              _vm.checkIfReservado(b) == false
                 ? _c("span", [
                     _c("i", {
                       staticClass: "fas fa-couch me-2 butacaIcon_d",
