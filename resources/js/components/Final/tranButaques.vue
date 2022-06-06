@@ -24,7 +24,7 @@
                             <i class="fas fa-couch me-2 butacaIcon_d" @click="getButaca(b)" :id="'butaca-' + b.id" :title="'Butaca ' + b.sillon + ': Fila ' + b.row + ' - Asiento ' + b.col"></i>
                         </span>
                         <span v-else>
-                            <i class="fas fa-couch me-2 butacaIcon_o"></i>
+                            <i class="fas fa-couch me-2 butacaIcon_o" :id="'butaca-' + b.id" :title="'Butaca ' + b.sillon + ': Fila ' + b.row + ' - Asiento ' + b.col"></i>
                         </span>
                     </span>
                 </div>

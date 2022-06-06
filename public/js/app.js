@@ -21456,15 +21456,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 20:
                 _this3.getMoviesDone = true;
-                _context2.next = 26;
+                _context2.next = 25;
                 break;
 
               case 23:
                 _context2.prev = 23;
                 _context2.t6 = _context2["catch"](0);
-                alert('Error [¿No internet?] from axios to get getAlreadyPlayingFromApi() : ' + _context2.t6);
 
-              case 26:
+              case 25:
               case "end":
                 return _context2.stop();
             }
@@ -21485,9 +21484,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   return response.data;
                 })["catch"](function (response) {
                   return response.data;
-                }, function () {
-                  alert('Error [HTTP Error] from axios to get getAlreadyPlaying() : ' + response);
-                });
+                }, function () {});
 
               case 3:
                 response = _context3.sent;
@@ -21496,9 +21493,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 7:
                 _context3.prev = 7;
                 _context3.t0 = _context3["catch"](0);
-                alert('Error [¿No internet?] from axios to get getAlreadyPlaying() : ' + _context3.t0);
 
-              case 10:
+              case 9:
               case "end":
                 return _context3.stop();
             }
@@ -21521,9 +21517,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   return response.data;
                 })["catch"](function (response) {
                   return response.data;
-                }, function () {
-                  alert('Error [HTTP Error] from axios to get getGenres() : ' + response);
-                });
+                }, function () {});
 
               case 3:
                 response = _context4.sent;
@@ -21536,15 +21530,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 _this4.getGenresDone = true;
-                _context4.next = 11;
+                _context4.next = 10;
                 break;
 
               case 8:
                 _context4.prev = 8;
                 _context4.t0 = _context4["catch"](0);
-                alert('Error [¿No internet?] from axios to get getGenres() : ' + _context4.t0);
 
-              case 11:
+              case 10:
               case "end":
                 return _context4.stop();
             }
@@ -22170,15 +22163,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this3.cinemas.push(_this3.cineObj);
                 }
 
-                _context2.next = 10;
+                _context2.next = 9;
                 break;
 
               case 7:
                 _context2.prev = 7;
                 _context2.t0 = _context2["catch"](0);
-                alert("ERROR [¿No internet?] en getCinemas() de currentCinemas.vue: " + _context2.t0);
 
-              case 10:
+              case 9:
               case "end":
                 return _context2.stop();
             }
@@ -52644,7 +52636,19 @@ var render = function () {
                     }),
                   ])
                 : _c("span", [
-                    _c("i", { staticClass: "fas fa-couch me-2 butacaIcon_o" }),
+                    _c("i", {
+                      staticClass: "fas fa-couch me-2 butacaIcon_o",
+                      attrs: {
+                        id: "butaca-" + b.id,
+                        title:
+                          "Butaca " +
+                          b.sillon +
+                          ": Fila " +
+                          b.row +
+                          " - Asiento " +
+                          b.col,
+                      },
+                    }),
                   ]),
             ])
           }),

@@ -139,7 +139,6 @@ export default {
 
         this.getMoviesDone = true;
       } catch (e) {
-        alert('Error [¿No internet?] from axios to get getAlreadyPlayingFromApi() : ' + e);
       }
     },
 
@@ -148,13 +147,11 @@ export default {
         let response = await axios.get(`https://api.themoviedb.org/3/movie/${api_id}?api_key=4475c14c3e095c6c8e3ca8d00f5070d5&language=es`)
           .then(response => response.data)
           .catch(response => response.data, () => {
-            alert('Error [HTTP Error] from axios to get getAlreadyPlaying() : ' + response);
           });
 
         return response.genres;
 
       } catch (e) {
-        alert('Error [¿No internet?] from axios to get getAlreadyPlaying() : ' + e);
       }
     },
 
@@ -163,7 +160,6 @@ export default {
         let response = await axios.get('https://api.themoviedb.org/3/genre/movie/list?api_key=4475c14c3e095c6c8e3ca8d00f5070d5&language=es')
           .then(response => response.data)
           .catch(response => response.data, () => {
-            alert('Error [HTTP Error] from axios to get getGenres() : ' + response);
           });
 
         for (let i = 0; i < response.genres.length; i++) {
@@ -173,7 +169,6 @@ export default {
         this.getGenresDone = true;
 
       } catch (e) {
-        alert('Error [¿No internet?] from axios to get getGenres() : ' + e);
       }
     },
 

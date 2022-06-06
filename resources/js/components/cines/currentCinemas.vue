@@ -82,7 +82,6 @@ export default {
           this.cinemas.push(this.cineObj);
         }
       } catch (e) {
-        alert("ERROR [¿No internet?] en getCinemas() de currentCinemas.vue: " + e);
       }
     },
 
