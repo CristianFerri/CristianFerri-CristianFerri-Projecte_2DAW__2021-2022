@@ -368,7 +368,7 @@ export default {
   color: var(--color);
   transition: 0.25s;
 }
-.user button:hover, button:focus {
+.user button:hover, .currentCinemas button:focus {
   border-color: var(--hover);
   color: #fff;
 }
