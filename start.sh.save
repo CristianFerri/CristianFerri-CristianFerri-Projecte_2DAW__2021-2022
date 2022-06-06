@@ -1,0 +1,5 @@
+#!/bin/bash
+
+code .
+npm run watcnsole -e "php artisan serve"
+konsole -e "npm run watch"
